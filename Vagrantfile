@@ -8,7 +8,7 @@ Vagrant::Config.run do |config|
     # does all the magic.
     chef.add_recipe("website")
   end
-  config.vm.share_folder("wordpress", "/var/www/wordpress", "./wordpress")
+  config.vm.share_folder("website", "/var/www/", "./website")
 
   config.vm.forward_port("web", 80, 4567)
 end
